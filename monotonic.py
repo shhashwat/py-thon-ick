@@ -22,20 +22,25 @@
 #     else:
 #           return True
 
-# !BETTER APPROACH
-def monotonic_array(arr)->bool:    
-    if len(arr) == 0:
-        return True
+# ? BETTER APPROACH
+# def monotonic_array(arr)->bool:    
+#     if len(arr) == 0:
+#         return True
     
-    inc = dec = True
+#     inc = dec = True
 
-    for i in range(1, len(arr)):
-        if arr[i] > arr[i - 1]:
-            dec = False
-        elif arr[i] < arr[i - 1]:
-            inc = False
+#     for i in range(1, len(arr)):
+#         if arr[i] > arr[i - 1]:
+#             dec = False
+#         elif arr[i] < arr[i - 1]:
+#             inc = False
     
-    return inc or dec
+#     return inc or dec
+
+
+# *BEST
+def monotonic_array(arr)->bool:
+    return all(arr[i] <= arr[i + 1] for i in range(len(arr) - 1)) or all(arr[i] >= arr[i + 1] for i in range(len(arr) - 1))
 
 
 def main()->None:
