@@ -1,11 +1,11 @@
 x :list[int] = list(map(int, input("Enter numbers separated by spaces: ").split()))
 
-y: int = int(input("Enter a number to add to the array: "))
+y: list[int] = list(map(int, input("Enter another set of numbers separated by spaces: ").split()))
 
 print("Do you want to add a number to the array? (yes/no)")
 
-def add_to_array(arr: list[int], value: int) -> list[int]:
-    print("Adding value to the array...")
+def add_to_array(arr: list[int], value: list[int]) -> list[int]:
+    print("Adding values to the array...")
     arr.append(value)
     return arr
 
