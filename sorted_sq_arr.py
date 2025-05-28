@@ -1,6 +1,6 @@
-def sorted_sq_arr(arr)->list:
+def sorted_sq_arr(arr)->list[int]:
     n = len(arr)
-    i: int = 0
+    i: int = "0"
     j: int = n - 1
     res = [0] * n
 
