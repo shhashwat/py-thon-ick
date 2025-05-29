@@ -24,8 +24,7 @@
 
 # ? BETTER APPROACH
 # def monotonic_array(arr)->bool:    
-#     if len(arr) == 0:
-#         return True
+#     if len(arr) == 0: return True
     
 #     inc = dec = True
 
@@ -36,7 +35,6 @@
 #             inc = False
     
 #     return inc or dec
-
 
 # *BEST
 def monotonic_array(arr)->bool:
